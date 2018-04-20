@@ -65,9 +65,9 @@
         </li>
         <li class="breadcrumb-item active">Contact</li>
       </ol>
- <div class="row">
+
      <div id="map"></div>
-      </div>
+     
       <!-- Content Row -->
 	    <br>
       <div class="row">
@@ -201,54 +201,60 @@
     <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
+	<script async defer 
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6z_NfX3MUDZhLoneny9Kc4ku6qOZcv6E&callback=initMap"></script>
 	<script>
-      
-	  function initMap() {
-	
-	var broadway = {
+	function initMap() {
+
+	var headOffice = {
 		info: '<strong>Head Office</strong><br>\
 					D.No.C-15, Electronic Complex<br>\
 					Kushaiguda Industrial Area, ECIl Post.<br>\
-					Hyderabad, Telangana - 500062',
+					Hyderabad, Telangana - 500062<br>\
+					<a href="https://www.google.com/maps/dir//17.480256,78.572118/@15.2171064,75.7858116,7z/data=!4m2!4m1!3e0" target="_blank">Get Directions</a>',
 		lat: 17.480256,
 		long: 78.572118
 	};
 
-	var belmont = {
+	var branchOffice = {
 		info: '<strong>Branch Office</strong><br>\
 					Plot No.11, Block No.06, <br> Phase IV, Auto Nagar,<br>\
-					Guntur, Andhra Pradesh - 522001',
+					Guntur, Andhra Pradesh - 522001<br>\
+					<a href="https://www.google.co.in/maps/dir//16.31951,80.475256/@14.6428928,77.9109794,8z/data=!4m2!4m1!3e0?hl=en" target="_blank">Get Directions</a>',
 		lat: 16.319510,
 		long: 80.475256
 	};
 
-	var sheridan = {
+	var CorporateOffice = {
 		info: '<strong>Corporate Office</strong><br>\r\
-					Flat No.201, D.No.1-7-283/16C/C-2<br> Aishwariya Building,MG Road, Opp Paradise Hotel,<br>\
-					Beside Jade Archade Secunderabad,<b>\
-					Telangana - 500003',
+					Flat No.201, D.No.1-7-283/16C/C-2<br>\
+					Aishwariya Building,MG Road, Opp Paradise Hotel,<br>\
+					Beside Jade Archade Secunderabad,<br>\
+					Telangana - 500003<br>\
+					<a href="https://www.google.co.in/maps/dir//17.441612,78.487855/@15.1982019,75.6651253,7z/data=!4m2!4m1!3e0?hl=en" target="_blank">Get Directions</a>',
 		lat: 17.441612,
 		long: 78.487855
 	};
-		var chalapalli = {
+	var UnitI = {
 		info: '<strong>Unit I</strong><br>\r\
-					Plot No. 46 & 49, Sy. No.160-163<br> Narayana Swamy Nagar, Behind TEC Building<br>\
-					Cherlapally, RangaReddy D.T<b>\
-					Telangana - 500051',
+					Plot No. 46 & 49, Sy. No.160-163<br>\
+					Narayana Swamy Nagar, Behind TEC Building<br>\
+					Cherlapally, RangaReddy D.T<br>\
+					Telangana - 500051<br>\
+					<a href="https://www.google.co.in/maps/dir//17.466593,78.61654/@15.2101951,75.6132169,7z/data=!4m2!4m1!3e0?hl=en" target="_blank">Get Directions</a>',
 		lat: 17.466593,
 		long: 78.616540
 	};
 
 	var locations = [
-      [broadway.info, broadway.lat, broadway.long, 0],
-      [belmont.info, belmont.lat, belmont.long, 1],
-      [sheridan.info, sheridan.lat, sheridan.long, 2],
-	  [chalapalli.info, chalapalli.lat, chalapalli.long, 3],
-	  
+      [headOffice.info, headOffice.lat, headOffice.long, 0],
+      [branchOffice.info, branchOffice.lat, branchOffice.long, 1],
+      [CorporateOffice.info, CorporateOffice.lat, CorporateOffice.long, 2],
+	   [UnitI.info, UnitI.lat, UnitI.long, 3],
     ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 7.5,
+		zoom: 7,
 		center: new google.maps.LatLng(17.480256, 78.572118),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
@@ -271,13 +277,7 @@
 		})(marker, i));
 	}
 }
-	  
-	  
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6z_NfX3MUDZhLoneny9Kc4ku6qOZcv6E&callback=initMap">
-    </script>
-
+	</script>
   </body>
 
 </html>
